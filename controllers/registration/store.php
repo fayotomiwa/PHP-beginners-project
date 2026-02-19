@@ -4,6 +4,8 @@ use Core\App;
 use Core\Database;
 use Core\Validator;
 
+$db = App::resolve(Database::class);
+
 $email = $_POST['email'];
 $password = $_POST['password'];
 
@@ -41,9 +43,7 @@ if ($user) {
     ]);
 
     // mark that the user has logged in
-    $_SESSION['user'] = [
-      'email' => $email
-    ];
+    login($user);
 
     header("location: /");
     exit();
