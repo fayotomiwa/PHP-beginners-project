@@ -1,0 +1,16 @@
+{
+    "name": "hp/phpdemo",
+    "authors": [
+        {
+            "name": "Fayotomiwa",
+            "email": "iyiolafolarin@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    }
+}
